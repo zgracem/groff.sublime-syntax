@@ -1,0 +1,78 @@
+.I 123c
+.I -123i
+.I 1.23P
+.I -1.23v
+.I -.5u
+.I 0f
+.I -1.n
+.I x123p
+.\" (?<=\W)(-?\d*\.\d+|-?\d+)((?<=\d)[ciPpmMnuvf])?
+
+3 + 4
+\$[(3 + 4)]
+
+\*s
+The string stored in the string variable with 1-character name s.
+
+\*(st
+The string stored in the string variable with 2-character name st.
+
+\*[stringvar arg1 arg2 ...]
+The string stored in the string variable with arbitrary length name stringvar, 
+taking arg1, arg2, ... as arguments.
+
+.ig
+Some text to be ignored.
+..
+
+\$0
+The name by which the current macro was invoked. 
+The als request can make a macro have more than one name.
+
+\$1
+Macro or string argument with 1-place number x, 
+where x is a digit between 1 and 9.
+
+\$(22
+Macro or string argument with 2-digit number xy.
+
+\$*
+In a macro or string, the concatenation of all the arguments 
+separated by spaces.
+
+\$@
+In a macro or string, the concatenation of all the arguments 
+with each surrounded by double quotes, and separated by spaces.
+
+\$[nexp]
+Macro or string argument with number nexp, where nexp is a numerical expression 
+evaluating to an integer ≥1.
+
+\nr
+\n(re
+\n[reg]
+\n[.A]
+
+\o'name'
+
+Here is \fBbold text\fR, a \f1numbered font\fP, a \f[font]named one, and
+finally an \f(xx shortcut.
+
+\V[env]
+The contents of the environment variable env. Alternative forms \V(xy and \Vx.
+
+\w'string'
+The width of the character sequence string.
+
+\x'N'
+Extra line-space function (negative before, positive after).
+
+.nr max e1>?e2
+The maximum of e1 and e2.
+
+.nr min e1<?e2
+The minimum of e1 and e2.
+
+.nr sc (c;e)
+Evaluate e using c as the default scaling indicator. 
+If c is missing, ignore scaling indicators in the evaluation of e.
